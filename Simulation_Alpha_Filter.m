@@ -7,14 +7,12 @@
 % Select 1 neuron for target;
 %
 
-Setsize=[2 8 16];
-Ntar=1;
-ntrls=1000;
-Nmatrix=zeros(10,10);
-TarDim=[1 1];
-DistDim=[2 2];
-TarFR=10;
-DistFR=TarFR/2;
+Setsize=[2 8 16];% Define number of distractors for simulation
+Ntar=1;% number of targets
+ntrls=1000; % how many trials should be simulated?
+Nmatrix=zeros(10,10); %That's our retinotopic map; one neuron per location
+TarFR=10;% firing rate for neurons coding for target relevant dimension
+DistFR=TarFR/2;% firing rate for neurons coding target irrelevant (i.e. distractor) dimension
 inhibition=0:1:TarFR*2; % A constant inhibition value; the whole matrix will be divided by that number   
 Namp=TarFR/2;
 for s=1:length(Setsize)
